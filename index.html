@@ -1396,6 +1396,27 @@ function editControlLibrary(library,copy){
   persistPrototypeState();closeDialog();setView('controlLibraries');toast(copy?'器件库已另存为':'器件库已更新');
  };
 }
+function publishedLibraryExport(library){
+ const version=library.currentVersion;
+ if(!version||version==='—')return null;
+ const compare=(left,right)=>left.localeCompare(right,undefined,{numeric:true});
+ const history=state.versionHistories.filter(record=>libraryKey(record.library)===libraryKey(library.library)&&compare(record.version,version)<=0).sort((left,right)=>compare(left.version,right.version));
+ const parts=new Set(libraryKey(library.library)===libraryKey('经典器件库')?state.parts:library.partIds||[]);
+ for(const record of history){
+  for(const part of record.added||[])if(part!=='全库')parts.add(part);
+  for(const {part} of record.modified||[])if(part!=='全库')parts.add(part);
+  for(const part of record.deleted||[])parts.delete(part);
+ }
+ return {library:library.library,version,parts:[...parts]};
+}
+function exportPublishedLibrary(library){
+ const payload=publishedLibraryExport(library);
+ if(!payload)return;
+ const url=URL.createObjectURL(new Blob([JSON.stringify([payload],null,2)],{type:'application/json'}));
+ const link=document.createElement('a');link.href=url;link.download=`${payload.library}-${payload.version}-原型数据.json`;link.click();
+ setTimeout(()=>URL.revokeObjectURL(url),1000);
+ toast(`已导出 ${payload.version} 原型 JSON 数据`);
+}
 function openControlLibraryActions(button,library){
  closeLibraryActions();
  const menu=document.createElement('div');menu.id='controlLibraryActionMenu';menu.className='context-menu';menu.setAttribute('role','menu');
@@ -1405,6 +1426,7 @@ function openControlLibraryActions(button,library){
   ['导入器件',mayManageLibrary('import'),()=>openImportLibraryDialog(library.id)],
   ['发布版本',pending&&hasLibraryPermission('release:create'),()=>openReleaseDialog(library.id)],
   ['另存为',mayManageLibrary('saveAs'),()=>editControlLibrary(library,true)],
+  ['导出',!!library.currentVersion&&library.currentVersion!=='—',()=>exportPublishedLibrary(library)],
   ['编辑',mayManageLibrary('edit'),()=>editControlLibrary(library,false)],
   ['删除',mayManageLibrary('delete'),()=>{openWorkflowConfirmation('删除器件库','确认删除 '+escapeDecisionText(library.library)+'？','确认删除',()=>{
    if(!mayManageLibrary('delete'))return;
