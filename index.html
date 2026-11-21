@@ -250,7 +250,7 @@
     </section>
     <section id="permissionCenterView" class="view control-view hidden">
       <div class="control-page-head"><h2>用户授权</h2></div>
-      <div class="control-body"><section class="control-table-card"><div class="control-toolbar permission-toolbar"><label>用户名称<input id="userNameFilter" class="field" list="userNameHistory" placeholder="模糊查询用户名称"><datalist id="userNameHistory"><option value="陈工"><option value="李工"><option value="赵工"><option value="王工"><option value="周工"></datalist></label><label>角色名称<input id="userRoleFilter" class="field" list="userRoleHistory" placeholder="模糊查询角色名称"><datalist id="userRoleHistory"><option value="管控管理员"><option value="审批员"><option value="发布管理员"><option value="AOI 申请人"><option value="只读人员"></datalist></label><label>账号状态<select id="userStatusFilter" class="select"><option value="all">全部</option><option value="active">启用</option><option value="inactive">停用</option></select></label><label class="user-time-filter">更新时间<select id="userTimeFilter" class="select"><option value="all">全部时间</option><option value="24h">最近24小时</option><option value="7d">最近7天</option><option value="30d">最近30天</option><option value="custom">自定义时间范围</option></select><span id="userCustomRange" class="release-date-range hidden"><input id="userUpdatedStart" class="field" type="date" aria-label="更新时间开始日期"><span>至</span><input id="userUpdatedEnd" class="field" type="date" aria-label="更新时间结束日期"></span></label></div><table class="table"><thead><tr><th>用户名称</th><th>账号状态</th><th>角色名称</th><th>更新时间</th><th>操作人</th><th>操作</th></tr></thead><tbody id="spcPermissionRows"></tbody></table><div class="control-library-pagination"><span id="userPageSummary"></span><button id="userPagePrev" class="btn">‹</button><div id="userPageNumbers" class="control-library-pages"></div><button id="userPageNext" class="btn">›</button><select id="userPageSize" class="select"><option value="10">10 条/页</option><option value="20">20 条/页</option><option value="50">50 条/页</option><option value="100">100 条/页</option></select></div></section></div>
+      <div class="control-body"><section class="control-table-card"><div class="control-toolbar permission-toolbar"><label>用户名称<input id="userNameFilter" class="field" list="userNameHistory" placeholder="模糊查询用户名称"><datalist id="userNameHistory"><option value="陈工"><option value="李工"><option value="赵工"><option value="王工"><option value="周工"></datalist></label><label>角色名称<input id="userRoleFilter" class="field" list="userRoleHistory" placeholder="模糊查询角色名称"><datalist id="userRoleHistory"><option value="超级管理员"><option value="审批员"><option value="发布管理员"><option value="AOI 申请人"><option value="只读人员"></datalist></label><label>账号状态<select id="userStatusFilter" class="select"><option value="all">全部</option><option value="active">启用</option><option value="inactive">停用</option></select></label><label class="user-time-filter">更新时间<select id="userTimeFilter" class="select"><option value="all">全部时间</option><option value="24h">最近24小时</option><option value="7d">最近7天</option><option value="30d">最近30天</option><option value="custom">自定义时间范围</option></select><span id="userCustomRange" class="release-date-range hidden"><input id="userUpdatedStart" class="field" type="date" aria-label="更新时间开始日期"><span>至</span><input id="userUpdatedEnd" class="field" type="date" aria-label="更新时间结束日期"></span></label></div><table class="table"><thead><tr><th>用户名称</th><th>账号状态</th><th>角色名称</th><th>更新时间</th><th>操作人</th><th>操作</th></tr></thead><tbody id="spcPermissionRows"></tbody></table><div class="control-library-pagination"><span id="userPageSummary"></span><button id="userPagePrev" class="btn">‹</button><div id="userPageNumbers" class="control-library-pages"></div><button id="userPageNext" class="btn">›</button><select id="userPageSize" class="select"><option value="10">10 条/页</option><option value="20">20 条/页</option><option value="50">50 条/页</option><option value="100">100 条/页</option></select></div></section></div>
     </section>
 
     <section id="auditLogsView" class="view control-view hidden">
@@ -314,7 +314,7 @@ const state={
   batch:{id:'AP-20260903-001',status:'draft',library:'2026年8月17日经典器件库',note:'',rejectionReason:'',items:[]},
   history:[{id:'AP-20260906-003',status:'pending',library:'高速板器件库',applicant:'周工',time:'2026-09-06 15:26:18',count:5,note:'补充高速板常用连接器参数',comments:[{user:'周工',time:'2026-09-06 15:26:18',text:'已完成样件验证，请协助审批。'}]},{id:'AP-20260828-006',status:'approved',library:'经典器件库',applicant:'李工',time:'2026-08-28 16:42:09',count:8,note:'新增电源板常用料号',version:'V1.23.35',approver:'陈工',approvalTime:'2026-09-02 20:07:40',comments:[{user:'陈工',time:'2026-09-02 20:07:40',text:'参数核对无误，同意发布。'}]},{id:'AP-20260825-003',status:'rejected',library:'新能源产品器件库',applicant:'赵工',time:'2026-08-25 10:14:32',count:3,note:'更新功率器件检测框',approver:'陈工',approvalTime:'2026-08-25 14:35:20',rejectionReason:'请补充极性检测参数后重新提交。',comments:[{user:'陈工',time:'2026-08-25 14:35:20',text:'极性参数缺失，本次退回。'}]}],
   publishableVersions:[{id:'VER-20260902-012',library:'经典器件库',currentVersion:'V1.23.34',version:'V1.23.35',source:'AP-20260828-006',created:'2026-08-28 16:35:12',status:'publishable',coverage:62,updated:'2026-09-02 20:07:40'},{id:'VER-20260826-006',library:'新能源产品器件库',currentVersion:'V2.3.0',version:'V2.3.0',source:'AP-20260825-003',created:'2026-08-25 14:18:46',status:'published',coverage:100,updated:'2026-08-26 18:22:16'}],
-  versionHistories:[{library:'经典器件库',version:'V1.23.35',previous:'V1.23.34',level:'修订版本',source:'AP-20260828-006',time:'2026-09-02 20:07:40',operator:'陈工',added:[],modified:[{part:'AMS1117-3.3',changes:['检测框由 24 × 48 调整为 28 × 62','阈值由 68 调整为 70']},{part:'C0402_104',changes:['更新焊盘框位置','优化极性检测参数']}]},{library:'经典器件库',version:'V1.23.34',previous:'V1.23.33',level:'修订版本',source:'AP-20260818-009',time:'2026-08-20 11:32:18',operator:'李工',added:[],modified:[{part:'BLM18SG221TN1D',changes:['调整器件框宽度','更新亮度阈值']}]},{library:'经典器件库',version:'V1.23.0',previous:'V1.22.18',level:'次版本',source:'AP-20260812-004',time:'2026-08-13 09:16:42',operator:'王工',added:['ECV-F6.3-47uF','HC32L136K8TA'],modified:[{part:'C0603_10P',changes:['补充极性检测算法']}]},{library:'新能源产品器件库',version:'V2.3.0',previous:'V2.2.16',level:'次版本',source:'AP-20260825-003',time:'2026-08-26 18:22:16',operator:'赵工',added:['MOS-AOD4184A'],modified:[{part:'C1210_475',changes:['更新封装尺寸']}]},{library:'新能源产品器件库',version:'V2.0.0',previous:'V1.18.9',level:'主版本',source:'管理员重大变更',time:'2026-07-01 10:00:00',operator:'管控管理员',added:['新能源功率器件系列'],modified:[{part:'全库',changes:['重构器件库分类结构','升级全库检测算法基线']}]},{library:'通用阻容器件库',version:'V3.8.12',previous:'V3.8.11',level:'修订版本',source:'AP-20260816-014',time:'2026-08-17 09:12:30',operator:'周工',added:[],modified:[{part:'C0603_104',changes:['阈值由 65 调整为 67']}] }],
+  versionHistories:[{library:'经典器件库',version:'V1.23.35',previous:'V1.23.34',level:'修订版本',source:'AP-20260828-006',time:'2026-09-02 20:07:40',operator:'陈工',added:[],modified:[{part:'AMS1117-3.3',changes:['检测框由 24 × 48 调整为 28 × 62','阈值由 68 调整为 70']},{part:'C0402_104',changes:['更新焊盘框位置','优化极性检测参数']}]},{library:'经典器件库',version:'V1.23.34',previous:'V1.23.33',level:'修订版本',source:'AP-20260818-009',time:'2026-08-20 11:32:18',operator:'李工',added:[],modified:[{part:'BLM18SG221TN1D',changes:['调整器件框宽度','更新亮度阈值']}]},{library:'经典器件库',version:'V1.23.0',previous:'V1.22.18',level:'次版本',source:'AP-20260812-004',time:'2026-08-13 09:16:42',operator:'王工',added:['ECV-F6.3-47uF','HC32L136K8TA'],modified:[{part:'C0603_10P',changes:['补充极性检测算法']}]},{library:'新能源产品器件库',version:'V2.3.0',previous:'V2.2.16',level:'次版本',source:'AP-20260825-003',time:'2026-08-26 18:22:16',operator:'赵工',added:['MOS-AOD4184A'],modified:[{part:'C1210_475',changes:['更新封装尺寸']}]},{library:'新能源产品器件库',version:'V2.0.0',previous:'V1.18.9',level:'主版本',source:'管理员重大变更',time:'2026-07-01 10:00:00',operator:'超级管理员',added:['新能源功率器件系列'],modified:[{part:'全库',changes:['重构器件库分类结构','升级全库检测算法基线']}]},{library:'通用阻容器件库',version:'V3.8.12',previous:'V3.8.11',level:'修订版本',source:'AP-20260816-014',time:'2026-08-17 09:12:30',operator:'周工',added:[],modified:[{part:'C0603_104',changes:['阈值由 65 调整为 67']}] }],
   approvalWorkflows:[{id:'WF-DEFAULT',name:'通用阻容器件库审批流程',scopeType:'library',library:'通用阻容器件库',libraries:['通用阻容器件库'],enabled:true,updated:'2026-09-02 18:20:10',nodes:[{id:'NODE-DEFAULT-1',name:'器件库审批',approver:'陈工'}]},{id:'WF-CLASSIC',name:'经典器件库审批流程',scopeType:'library',library:'经典器件库',enabled:true,updated:'2026-09-05 11:32:18',nodes:[{id:'NODE-CLASSIC-1',name:'参数复核',approver:'陈工'},{id:'NODE-CLASSIC-2',name:'管控确认',approver:'李工'}]},{id:'WF-ENERGY',name:'新能源器件库审批流程',scopeType:'library',library:'新能源产品器件库',enabled:false,updated:'2026-08-25 14:35:20',nodes:[{id:'NODE-ENERGY-1',name:'新能源器件审批',approver:'赵工'}]}],
   selectedApprovalWorkflowId:'WF-DEFAULT',workflowSearch:'',workflowStatus:'all',workflowDraft:null,
   controlLibraryQuery:'',controlLibraryStatus:'all',
@@ -331,16 +331,16 @@ const libraryPermissionModules=[
   {id:'roles',name:'角色管理',actions:[['roles:view','查看角色'],['roles:create','新增角色'],['roles:edit','编辑角色'],['roles:delete','删除角色'],['roles:toggle','启用／停用角色']]},
   {id:'users',name:'用户授权',actions:[['users:view','查看用户授权'],['users:assign','分配角色（单个／批量）'],['users:toggle','启用／停用账号']]}
 ];
-libraryPermissionModules.find(m=>m.id==='libraries').actions.push(['libraries:saveAs','器件库另存为'],['libraries:edit','编辑器件库'],['libraries:delete','删除器件库']);
+libraryPermissionModules.find(m=>m.id==='libraries').actions.push(['libraries:saveAs','器件库另存为'],['libraries:edit','编辑器件库']);
 const libraryPermissionDefs=libraryPermissionModules.flatMap(module=>module.actions);
-const legacyPermissionMap={view:['aoi:view','libraries:view'],submit:['aoi:update','aoi:add','aoi:sync','aoi:forceSync','aoi:submit','aoi:withdraw'],approve:['approval:view','approval:decide'],'approval:approve':['approval:decide'],'approval:reject':['approval:decide'],publish:['release:view','release:create'],library:['libraries:create','libraries:import','libraries:history','libraries:edit','libraries:saveAs','libraries:delete'],workflow:['approval:workflow'],authorize:['roles:view','roles:create','roles:edit','roles:delete','roles:toggle','users:view','users:assign','users:toggle'],'aoi:select':['aoi:update'],'libraries:export':['aoi:export'],'libraries:release':['release:create']};
+const legacyPermissionMap={view:['aoi:view','libraries:view'],submit:['aoi:update','aoi:add','aoi:sync','aoi:forceSync','aoi:submit','aoi:withdraw'],approve:['approval:view','approval:decide'],'approval:approve':['approval:decide'],'approval:reject':['approval:decide'],publish:['release:view','release:create'],library:['libraries:create','libraries:import','libraries:history','libraries:edit','libraries:saveAs'],workflow:['approval:workflow'],authorize:['roles:view','roles:create','roles:edit','roles:delete','roles:toggle','users:view','users:assign','users:toggle'],'aoi:select':['aoi:update'],'libraries:export':['aoi:export'],'libraries:release':['release:create']};
 function hasLibraryPermission(key){return libraryRoles.some(role=>role.id===state.role&&role.enabled&&role.permissions.includes(key))}
 function normalizeRolePermissions(permissions){return [...new Set(permissions.flatMap(key=>legacyPermissionMap[key]||[key]))].filter(key=>libraryPermissionDefs.some(([known])=>known===key))}
-const builtInLibraryRoles=[{id:'submitter',name:'AOI 申请人',description:'在 AOI 主程序提交器件库变更申请',permissions:['view','submit'],system:true},{id:'admin',name:'管控管理员',description:'管理器件库及系统业务配置',permissions:['view','submit','approve','publish','library','workflow','authorize','audit'],system:true},{id:'approver',name:'审批员',description:'处理分配给自己的申请',permissions:['view','approve','audit'],system:true},{id:'publisher',name:'发布管理员',description:'发布已审批的器件库版本',permissions:['view','publish','audit'],system:true},{id:'viewer',name:'只读人员',description:'查看器件库及授权记录',permissions:['view'],system:true}];
+const builtInLibraryRoles=[{id:'submitter',name:'AOI 申请人',description:'在 AOI 主程序提交器件库变更申请',permissions:['view','submit'],system:true},{id:'admin',name:'超级管理员',description:'管理器件库及系统业务配置',permissions:['view','submit','approve','publish','library','workflow','authorize','audit'],system:true},{id:'approver',name:'审批员',description:'处理分配给自己的申请',permissions:['view','approve','audit'],system:true},{id:'publisher',name:'发布管理员',description:'发布已审批的器件库版本',permissions:['view','publish','audit'],system:true},{id:'viewer',name:'只读人员',description:'查看器件库及授权记录',permissions:['view'],system:true}];
 const permissionNow=()=>new Date().toLocaleString('sv-SE',{hour12:false});
 let libraryRoles=builtInLibraryRoles.map(role=>({...role,enabled:true,updated:'2026-09-02 20:07:40',operator:'管理员',permissions:[...role.permissions]}));try{const saved=JSON.parse(localStorage.getItem('aoi-library-roles')||'null');if(Array.isArray(saved)&&saved.length)libraryRoles=saved.filter(role=>role&&role.id&&role.name&&Array.isArray(role.permissions)).map(role=>({...role,description:role.description||'',enabled:role.enabled!==false,updated:role.updated||'2026-09-02 20:07:40',operator:role.operator||'管理员'}))}catch(e){}
 libraryRoles.forEach(role=>role.permissions=normalizeRolePermissions(role.permissions));
-const adminLibraryPermissions=['libraries:saveAs','libraries:edit','libraries:delete'];
+const adminLibraryPermissions=['libraries:saveAs','libraries:edit'];
 try{
  const migrationKey='aoi-admin-library-actions-v1';
  if(!localStorage.getItem(migrationKey)){
@@ -400,9 +400,9 @@ function toast(message,type='success'){const el=document.createElement('div');el
 function setView(name){const target=$(`#${name}View`);if(!target)return;state.view=name;state.lastViews[state.system]=name;const locationState=JSON.stringify({system:state.system,view:name,libraryMode:state.libraryViewMode,imageMode:state.imageMode});try{sessionStorage.setItem('aoi-current-location',locationState)}catch(e){}try{localStorage.setItem('aoi-current-location',locationState)}catch(e){}try{history.replaceState(null,'',`#system=${encodeURIComponent(state.system)}&view=${encodeURIComponent(name)}${name==='library'?'&mode='+encodeURIComponent(state.libraryViewMode):''}`)}catch(e){}$('#app').classList.toggle('library-active',name==='library');$('#app').classList.toggle('home-active',name==='home');$('#app').classList.toggle('nav-expanded',state.navExpanded);$$('.view').forEach(v=>v.classList.add('hidden'));target.classList.remove('hidden');const navView=name==='editor'?'home':['versionHistory','releaseCreate'].includes(name)?'controlLibraries':name;$$('.nav-btn[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===navView));closeMenus();closeDialog();const activeRenderer={releaseManagement:renderReleaseTasks,controlLibraries:renderControlLibraries,permissionCenter:renderSpcPermissions,roleManagement:renderLibraryRoles,auditLogs:renderAuditLogs,library:renderLibrary}[name];if(activeRenderer)activeRenderer();render()}
 function toggleLibraryNav(){state.navExpanded=!state.navExpanded;$('#app').classList.toggle('nav-expanded',state.navExpanded);$('#libraryNavToggle .nav-label').textContent=state.navExpanded?'收起菜单栏':'展开菜单栏'}
 function applyPermissions(){$$('.admin-only').forEach(el=>{const locked=state.role!=='admin'||el.hasAttribute('data-system-locked');el.classList.remove('hidden');el.disabled=locked;el.setAttribute('aria-disabled',String(locked));el.title=locked?'需要器件库管理员权限':''})}
-function roleLabel(role){return {submitter:'编程员（提交人）',admin:'管控管理员',approver:'审批员',publisher:'发布管理员',deviceAdmin:'设备管理员',auditor:'只读审计员'}[role]||role}
+function roleLabel(role){return {submitter:'编程员（提交人）',admin:'超级管理员',approver:'审批员',publisher:'发布管理员',deviceAdmin:'设备管理员',auditor:'只读审计员'}[role]||role}
 function setRole(role,silent=false){state.role=role;applyPermissions();const canApprove=['admin','approver'].includes(role),canPublish=['admin','publisher'].includes(role);$$('.approve-only').forEach(el=>el.disabled=!canApprove);$$('.publish-only').forEach(el=>el.disabled=!canPublish);$('#approvalNavCount').classList.toggle('hidden',!(canApprove&&state.batch.status==='pending'));renderApproval();if(!silent)toast(`已切换为${roleLabel(role)}`)}
-function updateRoleOptions(){const select=$('#roleSelect');const roles=state.system==='programming'?[['submitter','编程员（提交人）'],['admin','器件库维护员']]:[['admin','管控管理员'],['approver','审批员'],['publisher','发布管理员'],['deviceAdmin','设备管理员'],['auditor','只读审计员']];select.innerHTML=roles.map(([value,label])=>`<option value="${value}">${label}</option>`).join('');state.role=roles[0][0];select.value=state.role;setRole(state.role,true)}
+function updateRoleOptions(){const select=$('#roleSelect');const roles=state.system==='programming'?[['submitter','编程员（提交人）'],['admin','器件库维护员']]:[['admin','超级管理员'],['approver','审批员'],['publisher','发布管理员'],['deviceAdmin','设备管理员'],['auditor','只读审计员']];select.innerHTML=roles.map(([value,label])=>`<option value="${value}">${label}</option>`).join('');state.role=roles[0][0];select.value=state.role;setRole(state.role,true)}
 function switchSystem(system){if(!['programming','control'].includes(system))return;const fallback=system==='programming'?'editor':'controlDashboard';const allowed=system==='programming'?['editor','library','myApplications']:['approval','controlDashboard','controlLibraries','versionHistory','releaseCreate','releaseManagement','roleManagement','permissionCenter','auditLogs'];const view=allowed.includes(state.lastViews[system])?state.lastViews[system]:fallback;state.system=system;$('#app').dataset.system=system;$$('[data-system-nav]').forEach(el=>el.classList.toggle('hidden',el.dataset.systemNav!==system));setView(view);updateRoleOptions();toast(`已进入${system==='programming'?'AOI 主程序':'器件库管理系统'}`)}
 function openSystemSwitcher(){$('#dialogHost').innerHTML=`<div class="dialog-backdrop"><section class="dialog system-switch-dialog" role="dialog" aria-modal="true"><div class="dialog__header">切换系统<button type="button" id="dialogClose" class="btn btn--icon" style="margin-left:auto;border:0" aria-label="关闭"><svg aria-hidden="true"><use href="#i-close"/></svg></button></div><div class="dialog__body"><div class="system-choice-grid"><button class="system-choice ${state.system==='programming'?'active':''}" data-system-choice="programming"><strong>AOI 主程序</strong><p>器件编辑、变更暂存、提交审批申请及查看本人申请进度。</p><span class="choice-status">${state.system==='programming'?'当前系统':'进入系统 →'}</span></button><button class="system-choice ${state.system==='control'?'active':''}" data-system-choice="control"><strong>器件库管理系统</strong><p>审批申请、查看全部器件库并将已审批版本发布到服务器。</p><span class="choice-status">${state.system==='control'?'当前系统':'进入系统 →'}</span></button></div></div></section></div>`;$('#dialogClose').onclick=closeDialog;$$('[data-system-choice]').forEach(btn=>btn.onclick=()=>switchSystem(btn.dataset.systemChoice))}
 function stageChange(change){if(state.batch.status==='pending'){toast('审批中的批次不可修改，请先撤回','error');return}if(state.batch.status==='approved'){state.batch={id:`AP-${Date.now()}`,status:'draft',library:'2026年8月17日经典器件库',note:'',rejectionReason:'',items:[]}}if(state.batch.status==='rejected')state.batch.status='draft';const old=state.batch.items.find(i=>i.part===change.part);if(old){old.after=change.after;old.fields=[...new Set([...old.fields,...change.fields])]}else state.batch.items.push(change);state.popover=true;render();toast(`${change.part} 已加入待提交变更`)}
@@ -670,7 +670,7 @@ function openVersionHistoryDialog(libraryName){const history=state.versionHistor
 let releaseTaskPage=1,releaseTaskPageCount=1;let releaseTaskPageSize=10,releaseTimeSort='desc';
 function canDeleteReleaseTask(){return !!libraryRoles.find(role=>role.id===state.role&&role.enabled&&role.permissions.includes('release:delete'))}
 function confirmDeleteReleaseTask(id){if(!canDeleteReleaseTask())return;const task=state.releaseTasks.find(item=>item.id===id);if(!task)return;openWorkflowConfirmation('确认删除发布任务',`确认删除发布任务 <b>${escapeDecisionText(task.id)}</b>（${escapeDecisionText(task.library)} ${escapeDecisionText(task.version)}）的记录吗？`,'确认删除',()=>{state.releaseTasks=state.releaseTasks.filter(item=>item.id!==id);state.auditLogs.unshift({time:permissionNow(),user:roleLabel(state.role),type:'删除发布任务',target:id,result:'成功',note:`删除 ${task.library} ${task.version} 的发布任务记录`});persistPrototypeState();renderReleaseTasks();renderAuditLogs();if(state.view==='controlDashboard')renderControlCenter();toast('发布任务已删除')},true);$('#dialogCancel').textContent='取消'}
-function renderReleaseTasks(){const start=$('#releaseTaskStart').value,end=$('#releaseTaskEnd').value,library=$('#releaseTaskLibrary').value.trim().toLocaleLowerCase(),creator=$('#releaseTaskCreator').value.trim().toLocaleLowerCase(),status=$('#releaseTaskStatus').value;const filtered=state.releaseTasks.filter(t=>matchesPageTime(t.completed||t.time,$('#releaseTaskTimeFilter').value,start,end)&&t.library.toLocaleLowerCase().includes(library)&&t.creator.toLocaleLowerCase().includes(creator)&&(status==='all'||t.status===status)).sort((a,b)=>{const order=(a.completed||a.time||'').localeCompare(b.completed||b.time||'');return releaseTimeSort==='desc'?-order:order});$('#releaseTimeSortIcon').textContent=releaseTimeSort==='desc'?'↓':'↑';$('#releaseTimeSort').setAttribute('aria-label',`发布时间，当前${releaseTimeSort==='desc'?'倒序':'正序'}，点击切换${releaseTimeSort==='desc'?'正序':'倒序'}`);const pageCount=Math.max(1,Math.ceil(filtered.length/releaseTaskPageSize));releaseTaskPageCount=pageCount;releaseTaskPage=Math.min(Math.max(1,releaseTaskPage),pageCount);$('#releaseTaskRows').innerHTML=filtered.slice((releaseTaskPage-1)*releaseTaskPageSize,releaseTaskPage*releaseTaskPageSize).map(t=>`<tr><td><b>${t.id}</b></td><td>${t.library}</td><td>${t.version}</td><td><span class="status status--${t.status==='success'?'approved':'failed'}">${taskStatusText(t.status)}</span></td><td>${t.creator}</td><td>${t.completed||t.time}</td><td><button type="button" class="btn btn--danger" data-release-delete="${escapeDecisionText(t.id)}" ${canDeleteReleaseTask()?'':'disabled title="无删除发布任务权限"'}>删除</button></td></tr>`).join('')||'<tr><td colspan="7" style="text-align:center;color:var(--color-muted)">暂无符合条件的发布任务</td></tr>';$$('[data-release-delete]').forEach(button=>button.onclick=()=>confirmDeleteReleaseTask(button.dataset.releaseDelete));$('#releaseTaskPageSummary').textContent=`共 ${filtered.length} 条 · 第 ${releaseTaskPage} / ${pageCount} 页`;$('#releaseTaskPages').innerHTML=Array.from({length:pageCount},(_,i)=>`<button type="button" class="btn ${i+1===releaseTaskPage?'active':''}" data-release-page="${i+1}">${i+1}</button>`).join('');$$('[data-release-page]').forEach(b=>b.onclick=()=>{releaseTaskPage=Number(b.dataset.releasePage);renderReleaseTasks()});$('#releaseTaskPrev').disabled=releaseTaskPage<=1;$('#releaseTaskNext').disabled=releaseTaskPage>=pageCount}
+function renderReleaseTasks(){const start=$('#releaseTaskStart').value,end=$('#releaseTaskEnd').value,library=$('#releaseTaskLibrary').value.trim().toLocaleLowerCase(),creator=$('#releaseTaskCreator').value.trim().toLocaleLowerCase(),status=$('#releaseTaskStatus').value;const filtered=state.releaseTasks.filter(t=>matchesPageTime(t.completed||t.time,$('#releaseTaskTimeFilter').value,start,end)&&t.library.toLocaleLowerCase().includes(library)&&t.creator.toLocaleLowerCase().includes(creator)&&(status==='all'||t.status===status)).sort((a,b)=>{const order=(a.completed||a.time||'').localeCompare(b.completed||b.time||'');return releaseTimeSort==='desc'?-order:order});$('#releaseTimeSortIcon').textContent=releaseTimeSort==='desc'?'↓':'↑';$('#releaseTimeSort').setAttribute('aria-label',`发布时间，当前${releaseTimeSort==='desc'?'倒序':'正序'}，点击切换${releaseTimeSort==='desc'?'正序':'倒序'}`);const pageCount=Math.max(1,Math.ceil(filtered.length/releaseTaskPageSize));releaseTaskPageCount=pageCount;releaseTaskPage=Math.min(Math.max(1,releaseTaskPage),pageCount);$('#releaseTaskRows').innerHTML=filtered.slice((releaseTaskPage-1)*releaseTaskPageSize,releaseTaskPage*releaseTaskPageSize).map(t=>`<tr><td><b>${t.id}</b></td><td>${t.library}</td><td>${t.version}<small style="display:block;color:var(--color-muted)">${t.releaseType==="rollback"?"数据回滚":"普通发布"}</small></td><td><span class="status status--${t.status==='success'?'approved':'failed'}">${taskStatusText(t.status)}</span></td><td>${t.creator}</td><td>${t.completed||t.time}</td><td><button type="button" class="btn btn--danger" data-release-delete="${escapeDecisionText(t.id)}" ${canDeleteReleaseTask()?'':'disabled title="无删除发布任务权限"'}>删除</button></td></tr>`).join('')||'<tr><td colspan="7" style="text-align:center;color:var(--color-muted)">暂无符合条件的发布任务</td></tr>';$$('[data-release-delete]').forEach(button=>button.onclick=()=>confirmDeleteReleaseTask(button.dataset.releaseDelete));$('#releaseTaskPageSummary').textContent=`共 ${filtered.length} 条 · 第 ${releaseTaskPage} / ${pageCount} 页`;$('#releaseTaskPages').innerHTML=Array.from({length:pageCount},(_,i)=>`<button type="button" class="btn ${i+1===releaseTaskPage?'active':''}" data-release-page="${i+1}">${i+1}</button>`).join('');$$('[data-release-page]').forEach(b=>b.onclick=()=>{releaseTaskPage=Number(b.dataset.releasePage);renderReleaseTasks()});$('#releaseTaskPrev').disabled=releaseTaskPage<=1;$('#releaseTaskNext').disabled=releaseTaskPage>=pageCount}
 $('#releaseTimeSort').onclick=()=>{releaseTimeSort=releaseTimeSort==='desc'?'asc':'desc';releaseTaskPage=1;renderReleaseTasks()};
 $('#releaseTaskTimeFilter').onchange=e=>{$('#releaseTaskCustomRange').classList.toggle('hidden',e.target.value!=='custom');releaseTaskPage=1;renderReleaseTasks()};['releaseTaskStart','releaseTaskEnd','releaseTaskLibrary','releaseTaskCreator','releaseTaskStatus'].forEach(id=>$('#'+id).addEventListener(id==='releaseTaskStatus'?'change':'input',()=>{releaseTaskPage=1;renderReleaseTasks()}));$('#releaseTaskReset').onclick=()=>{['releaseTaskStart','releaseTaskEnd','releaseTaskLibrary','releaseTaskCreator'].forEach(id=>$('#'+id).value='');$('#releaseTaskStatus').value='all';$('#releaseTaskTimeFilter').value='all';$('#releaseTaskCustomRange').classList.add('hidden');releaseTaskPage=1;renderReleaseTasks()};$('#releaseTaskPrev').onclick=()=>{releaseTaskPage--;renderReleaseTasks()};$('#releaseTaskNext').onclick=()=>{releaseTaskPage++;renderReleaseTasks()};$('#releaseTaskPageSize').onchange=e=>{releaseTaskPageSize=Number(e.target.value);releaseTaskPage=1;renderReleaseTasks()};
 function openLibraryPublishConfirmation(versionId){if(!hasLibraryPermission('release:create')){toast('当前角色没有发布权限','error');return}const version=state.publishableVersions.find(v=>v.id===versionId&&v.status==='publishable');if(!version){toast('该版本已发布或不可发布','error');return}$('#dialogHost').innerHTML=`<div class="dialog-backdrop"><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="libraryPublishTitle"><div class="dialog__header"><span id="libraryPublishTitle">确认发布</span><button type="button" id="dialogClose" class="btn btn--icon" style="margin-left:auto;border:0" aria-label="关闭"><svg aria-hidden="true"><use href="#i-close"/></svg></button></div><div class="dialog__body">确认发布 <b>${escapeDecisionText(version.library)} ${escapeDecisionText(version.version)}</b> 版本吗？<p>所有使用此器件库的设备将自动同步。空闲设备校验后启用，运行中设备在任务结束后启用，离线设备上线后更新。</p></div><div class="dialog__footer"><button id="dialogCancel" class="btn">取消</button><button id="dialogConfirm" class="btn btn--primary">确认发布</button></div></section></div>`;$('#dialogClose').onclick=$('#dialogCancel').onclick=closeDialog;$('#dialogConfirm').onclick=()=>createReleaseTask(version.id,'controlLibraries');requestAnimationFrame(()=>$('#dialogConfirm')?.focus())}
@@ -724,7 +724,7 @@ function openVersionHistoryPageV2(libraryName){
     page=Math.min(page,totalPages);
     const rows=filtered.slice((page-1)*pageSize,page*pageSize);
     if(!rows.some(item=>item.version===selected?.version))selected=rows[0];
-    $('#versionHistoryPageList').innerHTML=rows.map(item=>`<button class="version-history-item request-card ${item.version===selected?.version?'active':''}" data-page-history-version="${item.version}"><span class="request-title"><b>${item.version}</b><span class="status status--${versionRecordStatusClass(libraryName,item.version)}">${versionRecordStatus(libraryName,item.version)}</span></span><small class="version-revision-time">修订时间 <time>${displayReleaseTime(item.time)}</time></small></button>`).join('')||'<div class="empty-state">当前时间范围内暂无版本记录</div>';
+    $('#versionHistoryPageList').innerHTML=rows.map(item=>`<button class="version-history-item request-card ${item.version===selected?.version?'active':''}" data-page-history-version="${item.version}"><span class="request-title"><b>${item.version}${versionRecordStatus(libraryName,item.version)==="已发布"?` · ${item.releaseType==="rollback"?"数据回滚":"普通发布"}`:""}</b><span class="status status--${versionRecordStatusClass(libraryName,item.version)}">${versionRecordStatus(libraryName,item.version)}</span></span><small class="version-revision-time">修订时间 <time>${displayReleaseTime(item.time)}</time></small></button>`).join('')||'<div class="empty-state">当前时间范围内暂无版本记录</div>';
     $('#versionHistoryPagination').innerHTML=`<button class="btn" data-version-page="prev" ${page===1?'disabled':''}>上一页</button>${Array.from({length:totalPages},(_,i)=>`<button class="btn ${page===i+1?'active':''}" data-version-page="${i+1}" aria-label="第 ${i+1} 页">${i+1}</button>`).join('')}<button class="btn" data-version-page="next" ${page===totalPages?'disabled':''}>下一页</button>`;
     $$('[data-page-history-version]').forEach(btn=>btn.onclick=()=>{selected=history.find(v=>v.version===btn.dataset.pageHistoryVersion);$$('[data-page-history-version]').forEach(x=>x.classList.toggle('active',x===btn));renderPageDetail()});
     $$('[data-version-page]').forEach(btn=>btn.onclick=()=>{const target=btn.dataset.versionPage;page=target==='prev'?page-1:target==='next'?page+1:Number(target);renderList()});
@@ -746,7 +746,7 @@ function openDeleteLibraryDialog(){$('#dialogHost').innerHTML=`<div class="dialo
 $$('[data-view]').forEach(btn=>btn.onclick=()=>setView(btn.dataset.view));$('#systemSwitcher').onclick=openSystemSwitcher;$('#templateEditBtn').onclick=()=>setView('editor');$('#backHomeBtn').onclick=()=>setView(state.system==='programming'?'home':'controlDashboard');$('#backToEditorFromApplications').onclick=()=>setView('editor');$('#libraryNavToggle').onclick=toggleLibraryNav;$('#roleSelect').onchange=e=>setRole(e.target.value);$('#draftTrigger').onclick=e=>{e.stopPropagation();state.popover=!state.popover;renderDraft()};$('#closeDraft').onclick=()=>{state.popover=false;renderDraft()};$('#continueEdit').onclick=()=>{state.popover=false;$('#draftPopover').classList.add('hidden');renderDraft()};$('#submitBatchBtn').onclick=requestSubmitBatch;$('#changeList').onclick=e=>{const b=e.target.closest('[data-remove]');if(b)removeStagedChange(b.dataset.remove)};$('#requestNote').oninput=e=>{state.batch.note=e.target.value;$('#noteError').textContent='';e.target.classList.remove('field-error')};$$('#approvalView .approval-filter [data-filter]').forEach(item=>item.onclick=()=>{state.approvalFilter=item.dataset.filter;state.selectedApprovalId=null;renderApproval()});$('#requestCards').onclick=e=>{const card=e.target.closest('[data-request]');if(!card)return;state.selectedApprovalId=card.dataset.request;$$('#requestCards .request-card').forEach(x=>x.classList.toggle('selected',x===card));renderDetail(approvalRecords().find(r=>r.id===card.dataset.request))};$('#myApplicationCards').onclick=e=>{const card=e.target.closest('[data-my-request]');if(!card)return;$$('#myApplicationCards .request-card').forEach(x=>x.classList.toggle('selected',x===card));renderMyApplicationDetail(approvalRecords().find(r=>r.id===card.dataset.myRequest))};$('#newReleaseBtn').onclick=()=>openReleaseDialog();$('#addLibraryRole').onclick=openNewLibraryRoleDialog;
 ['roleNameFilter','roleStatusFilter','roleUpdatedStart','roleUpdatedEnd'].forEach(id=>$('#'+id).addEventListener(['roleStatusFilter','roleUpdatedStart','roleUpdatedEnd'].includes(id)?'change':'input',()=>{rolePage=1;renderLibraryRoles()}));$('#roleTimeFilter').onchange=e=>{$('#roleCustomRange').classList.toggle('hidden',e.target.value!=='custom');rolePage=1;renderLibraryRoles()};
 ['userNameFilter','userRoleFilter','userStatusFilter','userUpdatedStart','userUpdatedEnd'].forEach(id=>$('#'+id).addEventListener(['userStatusFilter','userUpdatedStart','userUpdatedEnd'].includes(id)?'change':'input',()=>{userPage=1;renderSpcPermissions()}));$('#userTimeFilter').onchange=e=>{$('#userCustomRange').classList.toggle('hidden',e.target.value!=='custom');userPage=1;renderSpcPermissions()};
-const userHistorySeeds={userNameFilter:['陈工','李工','赵工','王工','周工'],userRoleFilter:['管控管理员','审批员','发布管理员','AOI 申请人','只读人员']};const userHistoryTargets={userNameFilter:'userNameHistory',userRoleFilter:'userRoleHistory'};let userSearchHistory={};try{userSearchHistory=JSON.parse(localStorage.getItem('aoi-user-search-history')||'{}')||{}}catch(e){}Object.entries(userHistoryTargets).forEach(([inputId,listId])=>{const list=$('#'+listId),draw=()=>{list.innerHTML=(userSearchHistory[inputId]||userHistorySeeds[inputId]).slice(0,5).map(value=>'<option value="'+escapeDecisionText(value)+'">').join('')};draw();$('#'+inputId).addEventListener('change',event=>{const value=event.target.value.trim();if(!value)return;userSearchHistory[inputId]=[value,...(userSearchHistory[inputId]||userHistorySeeds[inputId]).filter(item=>item!==value)].slice(0,5);try{localStorage.setItem('aoi-user-search-history',JSON.stringify(userSearchHistory))}catch(e){}draw()})});
+const userHistorySeeds={userNameFilter:['陈工','李工','赵工','王工','周工'],userRoleFilter:['超级管理员','审批员','发布管理员','AOI 申请人','只读人员']};const userHistoryTargets={userNameFilter:'userNameHistory',userRoleFilter:'userRoleHistory'};let userSearchHistory={};try{userSearchHistory=JSON.parse(localStorage.getItem('aoi-user-search-history')||'{}')||{}}catch(e){}Object.entries(userHistoryTargets).forEach(([inputId,listId])=>{const list=$('#'+listId),draw=()=>{list.innerHTML=(userSearchHistory[inputId]||userHistorySeeds[inputId]).slice(0,5).map(value=>'<option value="'+escapeDecisionText(value)+'">').join('')};draw();$('#'+inputId).addEventListener('change',event=>{const value=event.target.value.trim();if(!value)return;userSearchHistory[inputId]=[value,...(userSearchHistory[inputId]||userHistorySeeds[inputId]).filter(item=>item!==value)].slice(0,5);try{localStorage.setItem('aoi-user-search-history',JSON.stringify(userSearchHistory))}catch(e){}draw()})});
 $('#rolePagePrev').onclick=()=>{rolePage--;renderLibraryRoles()};$('#rolePageNext').onclick=()=>{rolePage++;renderLibraryRoles()};$('#rolePageSize').onchange=()=>{rolePage=1;renderLibraryRoles()};
 $('#userPagePrev').onclick=()=>{userPage--;renderSpcPermissions()};$('#userPageNext').onclick=()=>{userPage++;renderSpcPermissions()};$('#userPageSize').onchange=()=>{userPage=1;renderSpcPermissions()};
 $('#approvalTimeFilter').onchange=e=>{state.approvalTimeFilter=e.target.value;state.selectedApprovalId=null;renderApproval()};$('#approvalStatusFilter').onchange=e=>{state.approvalStatusFilter=e.target.value;state.selectedApprovalId=null;renderApproval()};$('#approvalLibraryFilter').oninput=e=>{state.approvalLibraryQuery=e.target.value;state.selectedApprovalId=null;renderApproval()};$('#approvalStartDate').onchange=e=>{state.approvalStartDate=e.target.value;state.selectedApprovalId=null;renderApproval()};$('#approvalEndDate').onchange=e=>{state.approvalEndDate=e.target.value;state.selectedApprovalId=null;renderApproval()};
@@ -938,7 +938,7 @@ function renderLibraryRoots(){
   if(q&&!nameMatches&&!matches.length)continue;
   const expanded=expandedLibraryRoots.has(libraryKey(name));
   html.push(`<button type="button" class="library-root ${active?'active':''}" data-library-root="${escapeDecisionText(name)}" aria-expanded="${expanded}"><span aria-hidden="true">${expanded?'▾':'▸'}</span><span class="root-name">${escapeDecisionText(name)}</span><span class="root-count">${parts.length}</span></button>`);
-  if(expanded)html.push((q&&!nameMatches?matches:parts).map(p=>`<div class="tree-item ${p===state.selectedPart?'selected':''}" data-part-library="${escapeDecisionText(name)}" data-libpart="${escapeDecisionText(p)}"><span class="tree-line"></span>${escapeDecisionText(p)}</div>`).join('')||'<div style="padding:12px 28px;color:var(--color-muted)">暂无料号</div>');
+  if(expanded)html.push((typeof batchLibraryBranches!=="undefined"&&batchLibraryBranches(name,q&&!nameMatches?matches:parts))||(q&&!nameMatches?matches:parts).map(p=>`<div class="tree-item ${p===state.selectedPart?'selected':''}" data-part-library="${escapeDecisionText(name)}" data-libpart="${escapeDecisionText(p)}"><span class="tree-line"></span>${escapeDecisionText(p)}</div>`).join('')||'<div style="padding:12px 28px;color:var(--color-muted)">暂无料号</div>');
  }
  $('#libraryTree').innerHTML=html.join('')||'<div style="padding:16px;color:var(--color-muted)">没有匹配的器件库或料号</div>';
  $$('[data-library-root]').forEach(button=>button.onclick=()=>{
@@ -1188,9 +1188,9 @@ releaseDetailView.className='view control-view standalone-page hidden';
 $('#releaseManagementView').after(releaseDetailView);
 function showReleaseRecord(task){
  const version=state.versionHistories.find(v=>libraryKey(v.library)===libraryKey(task.library)&&v.version===task.version);
- const rows=version?buildVersionChangeRows(version):[];
+ const rows=version?buildVersionChangeRows(version):[]; for(const row of rows){const change=version.rollbackItems?.find(item=>item.part===row.part);if(change)row.item=`${rbAction(change)} · 来源 ${change.sourceVersion}`}
  const fields=[
-  ['任务编号',task.id],['器件库',task.library],['发布版本',task.version],
+  ['任务编号',task.id],['器件库',task.library],['发布版本',task.version],['发布类型',releaseKind(task)],
   ['发布状态',taskStatusText(task.status)],['操作人',task.creator],['发布时间',displayReleaseTime(task.completed||task.time)]
  ];
  const values=fields.map(([label,value])=>`<div><dt style="color:var(--color-muted);margin-bottom:6px">${label}</dt><dd style="margin:0;font-weight:600;overflow-wrap:anywhere">${escapeDecisionText(value||'—')}</dd></div>`).join('');
@@ -1271,7 +1271,7 @@ userIdHeader.textContent='用户ID';
 userHeader.cells[2].before(userIdHeader);
 function updateBulkRoleButton(){
  bulkRoleButton.disabled=!mayAssignRoles()||!selectedAccounts.size;
- const boxes=$('#spcPermissionRows [data-bulk-account]');
+ const boxes=$$('#spcPermissionRows [data-bulk-account]');
  selectAllAccounts.disabled=!mayAssignRoles()||!boxes.length;
  selectAllAccounts.checked=!!boxes.length&&boxes.every(b=>b.checked);
  selectAllAccounts.indeterminate=!selectAllAccounts.checked&&boxes.some(b=>b.checked);
@@ -1427,12 +1427,7 @@ function openControlLibraryActions(button,library){
   ['发布版本',pending&&hasLibraryPermission('release:create'),()=>openReleaseDialog(library.id)],
   ['另存为',mayManageLibrary('saveAs'),()=>editControlLibrary(library,true)],
   ['导出',!!library.currentVersion&&library.currentVersion!=='—',()=>exportPublishedLibrary(library)],
-  ['编辑',mayManageLibrary('edit'),()=>editControlLibrary(library,false)],
-  ['删除',mayManageLibrary('delete'),()=>{openWorkflowConfirmation('删除器件库','确认删除 '+escapeDecisionText(library.library)+'？','确认删除',()=>{
-   if(!mayManageLibrary('delete'))return;
-   if(approvalRecords().some(r=>libraryKey(r.library)===libraryKey(library.library)&&r.status==='pending')){toast('该库存在审批中申请，无法删除','error');return}
-   removedLibraryIds.add(library.id);localStorage.setItem('aoi-removed-control-libraries',JSON.stringify([...removedLibraryIds]));closeDialog();renderControlLibraries();toast('器件库已从中心列表移除');
-  },true);$('#dialogCancel').textContent='取消'}]
+  ['编辑',mayManageLibrary('edit'),()=>editControlLibrary(library,false)]
  ];
  for(const [label,enabled,action] of actions){
   const item=document.createElement('button');item.className='menu-item';item.textContent=label;item.disabled=!enabled;item.setAttribute('role','menuitem');
@@ -1524,5 +1519,230 @@ function seedPublishableLibraryExamples(){
  if(state.view==='controlLibraries')renderControlLibraries();
 }
 seedPublishableLibraryExamples();
-</script></body>
+const releaseKind=row=>row?.releaseType==='rollback'?'数据回滚':'普通发布';
+const rbSame=(a,b)=>libraryKey(a)===libraryKey(b);
+const rbAllowed=()=>state.role==='admin'&&hasLibraryPermission('release:create');
+const rbCompare=(a,b)=>a.localeCompare(b,undefined,{numeric:true});
+function rbTimeline(library){
+ const timeline=new Map();
+ const records=state.versionHistories.filter(row=>rbSame(row.library,library.library)&&rbCompare(row.version,library.currentVersion)<=0&&versionRecordStatus(row.library,row.version)==='已发布').sort((a,b)=>rbCompare(a.version,b.version));
+ for(const record of records){
+  const groups=new Map();
+  for(const row of buildVersionChangeRows(record)){if(!row.part||row.part==='全库')continue;if(!groups.has(row.part))groups.set(row.part,[]);groups.get(row.part).push(row)}
+  for(const [part,rows] of groups){
+   const states=timeline.get(part)||[], restored=record.rollbackItems?.find(item=>item.part===part);
+   if(!states.length&&record.previous&&record.previous!=='—'&&versionRecordStatus(record.library,record.previous)==='已发布'){
+    if(rows[0].type==='新增')states.push({version:record.previous,data:null});
+    else if(rows.every(row=>row.before&&row.before!=='未记录'&&row.before!=='—'))states.push({version:record.previous,data:Object.fromEntries(rows.map(row=>[row.item,row.before]))});
+   }
+   const data=restored?restored.after:rows[0].type==='删除'?null:rows[0].type==='新增'?{}:{...states.at(-1)?.data,...Object.fromEntries(rows.map(row=>[row.item,row.after]))};
+   states.push({version:record.version,data});timeline.set(part,states);
+  }
+ }
+ return timeline;
+}
+const rbValue=data=>data===null?'不存在':Object.values(data||{}).join('；')||'存在（原型未记录参数）';
+const rbAction=row=>row.after===null?'移除料号':row.before===null?'恢复料号':'恢复历史数据';
+function rbRequestItems(request){
+ if(request.items?.length)return request.items;
+ return state.versionHistories.filter(row=>row.source===request.id&&versionRecordStatus(row.library,row.version)!=='已发布').flatMap(buildVersionChangeRows);
+}
+function rbConflicts(request){
+ if(!request||!['pending','approved'].includes(request.status))return [];
+ const latest=new Map();
+ for(const record of state.versionHistories.filter(row=>rbSame(row.library,request.library)&&versionRecordStatus(row.library,row.version)==='已发布').sort((a,b)=>rbCompare(a.version,b.version))){
+  for(const row of buildVersionChangeRows(record))latest.set(row.part,record);
+ }
+ return rbRequestItems(request).flatMap(item=>{
+  const record=latest.get(item.part), change=record?.rollbackItems?.find(row=>row.part===item.part);
+  if(!change||!record.rollbackRequests?.includes(request.id))return [];
+  const base=typeof item.before==='string'&&item.before!=='未记录'?item.before:'';
+  if(item.type==='新增'?change.after===null:base&&change.after!==null&&(base===rbValue(change.after)||change.after[item.item]===base))return [];
+  return [{part:item.part,version:record.version,base:base||'未记录申请基准',current:rbValue(change.after),target:typeof item.after==='string'?item.after:`${item.type}：${(item.fields||[]).join('、')||item.part}`}];
+ });
+}
+function rbPublish(library,baseline,changes,reason){
+ if(!rbAllowed()||!changes.length||!reason.trim())return false;
+ const current=controlLibraryRows().find(row=>row.id===library.id);
+ if(!current||current.currentVersion!==baseline){toast('已发布版本已变化，请重新预览','error');return false}
+ const ceiling=[baseline,...state.versionHistories.filter(row=>rbSame(row.library,current.library)).map(row=>row.version)].sort(rbCompare).at(-1);
+ const version=nextLibraryVersion(ceiling,[]),time=new Date().toLocaleString('sv-SE',{hour12:false}),operator=roleLabel(state.role),id=`PUB-RB-${Date.now()}`;
+ const entry={library:current.library,version,previous:baseline,level:'修订版本',source:id,time,operator,releaseType:'rollback',rollbackItems:changes,rollbackRequests:approvalRecords().filter(row=>rbSame(row.library,current.library)&&['pending','approved'].includes(row.status)).map(row=>row.id),added:[],modified:[],deleted:[]};
+ for(const row of changes){const key=row.after===null?'deleted':row.before===null?'added':'modified';entry[key].push({part:row.part,changes:[{item:'料号参数',before:rbValue(row.before),after:rbValue(row.after)}]})}
+ let record=state.publishableVersions.find(row=>row.id===current.id);
+ if(!record){record={...current};state.publishableVersions.unshift(record)}
+ if(record.status==='publishable'){
+  const staged=state.versionHistories.find(row=>rbSame(row.library,current.library)&&row.version===record.version);
+  const pendingVersion=nextLibraryVersion(version,[]);
+  if(staged){for(const request of state.history.filter(row=>row.id===staged.source&&row.version===staged.version))request.version=pendingVersion;staged.version=pendingVersion;staged.previous=version}
+  record.version=pendingVersion;
+ }else record.version=version;
+ Object.assign(record,{currentVersion:version,updated:time,operator});
+ state.versionHistories.unshift(entry);
+ state.releaseTasks.unshift({id,library:current.library,version,status:'success',creator:operator,time,completed:time,note:reason,releaseType:'rollback'});
+ const name=devicePublishedLibraries.find(row=>rbSame(row.library,current.library))?.library||current.library;
+ devicePublishedLibraries.filter(row=>rbSame(row.library,current.library)).forEach(row=>row.latest=false);
+ devicePublishedLibraries.unshift({id,library:name,version,published:time,summary:reason,latest:true});
+ state.auditLogs.unshift({time,user:operator,type:'数据回滚',target:id,result:'成功',note:reason});persistPrototypeState();return true;
+}
+function openPartRollback(library){
+ if(!rbAllowed()||!library.currentVersion||library.currentVersion==='—')return;
+ const baseline=library.currentVersion, selected=new Set(), choices=new Map(), escape=escapeDecisionText;
+ const options=[...rbTimeline(library)].flatMap(([part,states])=>{
+  const current=states.at(-1).data;
+  const sources=states.slice(0,-1).reverse().filter(source=>JSON.stringify(source.data)!==JSON.stringify(current));
+  return sources.length?[{part,current,sources}]:[];
+ }).sort((a,b)=>a.part.localeCompare(b.part));
+ $('#rollbackPanel').innerHTML=`<p>当前发布版本：${escape(baseline)}。逐个选择历史来源，一次确认生成一个数据回滚版本。</p><input id="rollbackSearch" class="field" placeholder="搜索料号" aria-label="搜索料号"><div id="rollbackPartRows" class="rollback-rows"></div><label class="label" for="rollbackReason">回滚原因 *</label><textarea id="rollbackReason" class="field" style="width:100%;height:65px" maxlength="500"></textarea><p id="rollbackError" role="alert"></p><div class="rollback-actions"><button id="rollbackCancel" class="btn">清空选择</button><button id="rollbackConfirm" class="btn btn--primary">确认并发布回滚</button></div>`;
+ const draw=()=>{
+  const query=$('#rollbackSearch').value.trim().toLowerCase();
+  const rows=options.map((row,index)=>{
+   if(!row.part.toLowerCase().includes(query)&&!selected.has(index))return '';
+   const source=choices.get(index)||0, target=row.sources[source];
+   return `<tr><td><input type="checkbox" aria-label="选择 ${escape(row.part)}" data-rb-select="${index}" ${selected.has(index)?'checked':''}></td><td>${escape(target.data?.packageType||target.data?.package||'—')}</td><td title="${batchAttr(row.part)}">${escape(row.part)}</td><td>${rollbackImage(target.data,'rgbImage','RGB 图')}</td><td>${rollbackImage(target.data,'whiteImage','白图')}</td><td>${escape(rbValue(row.current))}</td><td><select class="select" aria-label="恢复来源" data-rb-source="${index}">${row.sources.map((item,key)=>`<option value="${key}" ${key===source?'selected':''}>${escape(item.version)}</option>`).join('')}</select></td><td>${escape(rbAction({before:row.current,after:target.data}))}：${escape(rbValue(target.data))}</td></tr>`;
+  }).join('');
+  $('#rollbackPartRows').innerHTML=`<table class="table"><thead><tr><th>选择</th><th>封装类型</th><th>料号 ID</th><th>RGB 图</th><th>白图</th><th>当前数据</th><th>恢复来源</th><th>回滚后数据</th></tr></thead><tbody>${rows||'<tr><td colspan="8">没有匹配且可恢复的历史料号</td></tr>'}</tbody></table>`;
+  $$('[data-rb-select]').forEach(input=>input.onchange=()=>{const index=Number(input.dataset.rbSelect);if(input.checked)selected.add(index);else selected.delete(index);draw()});
+  $$('[data-rb-source]').forEach(input=>input.onchange=()=>{choices.set(Number(input.dataset.rbSource),Number(input.value));draw()});
+  $('#rollbackConfirm').disabled=!selected.size;$('#rollbackConfirm').textContent=`确认并发布回滚（${selected.size}）`;
+ };
+ $('#rollbackSearch').oninput=draw;$('#rollbackCancel').onclick=()=>{selected.clear();choices.clear();$('#rollbackSearch').value='';$('#rollbackReason').value='';$('#rollbackError').textContent='';draw()};
+ $('#rollbackConfirm').onclick=()=>{const reason=$('#rollbackReason').value.trim();if(!reason){$('#rollbackError').textContent='请输入回滚原因';return}
+  const changes=[...selected].map(index=>{const row=options[index],target=row.sources[choices.get(index)||0];return {part:row.part,sourceVersion:target.version,before:row.current,after:target.data}});
+  if(rbPublish(library,baseline,changes,reason)){showReleaseRecord(state.releaseTasks[0]);toast('数据回滚版本已发布')}
+ };draw();
+}
+const rbLibraryDetail=showLibraryRecord;
+showLibraryRecord=function(library){
+ rbLibraryDetail(library);
+ const [basic,flow]=$$('#controlLibraryEditView .control-body > section');
+ const browse=$('#browseControlParts'),heading=basic.querySelector('h3'),header=document.createElement('div');
+ header.className='library-basic-heading';heading.before(header);header.append(heading,browse);heading.style.margin='0';
+ if(!rbAllowed())return;
+ const tabs=document.createElement('div');tabs.className='library-detail-tabs';tabs.setAttribute('role','group');tabs.setAttribute('aria-label','器件库详情');
+ tabs.innerHTML='<button type="button" class="btn btn--primary" aria-pressed="true">审批流程</button><button type="button" class="btn" aria-pressed="false">数据回滚</button>';
+ const workflow=document.createElement('div');workflow.append(...flow.childNodes);const rollback=document.createElement('div');rollback.id='rollbackPanel';rollback.hidden=true;flow.append(tabs,workflow,rollback);
+ const buttons=[...tabs.children];buttons.forEach((button,i)=>button.onclick=()=>{workflow.hidden=!!i;rollback.hidden=!i;buttons.forEach((b,j)=>{b.classList.toggle('btn--primary',i===j);b.setAttribute('aria-pressed',String(i===j))});if(i&&!rollback.childNodes.length){if(library.currentVersion&&library.currentVersion!=='—')openPartRollback(library);else rollback.textContent='该器件库尚无已发布版本，无法回滚。'}});
+};
+function rollbackImage(data,key,label){const src=data?.[key];return typeof src==='string'&&/^data:image\/(png|jpe?g|webp);base64,[a-z0-9+/=]+$/i.test(src)?`<img class="rollback-preview" src="${src}" alt="${label}">`:data===null?'不适用':'未记录';}
+const rbApprovalDecision=completeApprovalDecision;
+completeApprovalDecision=function(id,type,opinion){if(type==='approve'&&rbConflicts(approvalRecords().find(row=>row.id===id)).length){toast('存在回滚冲突，请驳回并重新提交','error');return}return rbApprovalDecision(id,type,opinion)};
+const rbApprovalDetail=renderDetail;
+renderDetail=function(record){rbApprovalDetail(record);const conflicts=rbConflicts(record);if(!conflicts.length)return;const section=document.createElement('section');section.className='control-table-card';section.style.margin='12px';section.innerHTML=`<h3>回滚冲突</h3><table class="table"><thead><tr><th>料号</th><th>回滚版本</th><th>申请基准</th><th>当前数据</th><th>申请目标</th></tr></thead><tbody>${conflicts.map(row=>`<tr>${[row.part,row.version,row.base,row.current,row.target].map(value=>`<td>${escapeDecisionText(value)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;$('#requestDetail').prepend(section)};
+const rbNormalPublish=createReleaseTask;
+createReleaseTask=function(versionId,returnView){
+ const record=state.publishableVersions.find(row=>row.id===(versionId||$('input[name="releaseVersion"]:checked')?.value));
+ const conflicts=rbConflicts(record&&approvalRecords().find(row=>row.id===record.source));
+ if(conflicts.length){toast(`存在回滚冲突，需重新核对：${[...new Set(conflicts.map(row=>row.part))].join('、')}`,'error');return}
+ const oldTask=state.releaseTasks[0];rbNormalPublish(versionId,returnView);
+ if(state.releaseTasks[0]!==oldTask){state.releaseTasks[0].releaseType='normal';const history=state.versionHistories.find(row=>rbSame(row.library,record.library)&&row.version===record.currentVersion);if(history)history.releaseType='normal';persistPrototypeState()}
+};
+for(const task of state.releaseTasks.filter(row=>row.releaseType==='rollback'&&row.status==='success'&&!devicePublishedLibraries.some(device=>device.id===row.id)).slice().reverse()){
+ const name=devicePublishedLibraries.find(row=>rbSame(row.library,task.library))?.library||task.library;
+ const latest=controlLibraryRows().find(row=>rbSame(row.library,task.library))?.currentVersion===task.version;
+ if(latest)devicePublishedLibraries.filter(row=>rbSame(row.library,task.library)).forEach(row=>row.latest=false);
+ devicePublishedLibraries.unshift({id:task.id,library:name,version:task.version,published:task.time,summary:task.note,latest});
+}
+const controlRolePicker=$('#roleSelect').closest('.role-wrap');
+const controlRolePickerHome=controlRolePicker.parentElement;
+function placeControlRolePicker(){
+ const header=state.system==='control'&&$(`#${state.view}View .control-page-head`);
+ if(header){controlRolePicker.style.marginLeft='auto';header.append(controlRolePicker)}
+ else{controlRolePicker.style.marginLeft='';controlRolePickerHome.append(controlRolePicker)}
+}
+const setViewWithRolePicker=setView;
+setView=function(name){setViewWithRolePicker(name);placeControlRolePicker()};
+const showLibraryRecordWithRolePicker=showLibraryRecord;
+showLibraryRecord=function(library){
+ showLibraryRecordWithRolePicker(library);
+ try{sessionStorage.setItem('aoi-control-library-detail-id',library.id)}catch(e){}
+};
+$('#roleSelect').onchange=event=>{
+ setRole(event.target.value);
+ if(state.system==='control'&&state.view==='controlLibraryEdit'){
+  const id=sessionStorage.getItem('aoi-control-library-detail-id');
+  const library=controlLibraryRows().find(row=>row.id===id);
+  if(library)showLibraryRecord(library);
+ }
+};
+if(state.system==='control'&&savedLocation?.view==='controlLibraryEdit'){
+ const id=sessionStorage.getItem('aoi-control-library-detail-id');
+ const library=controlLibraryRows().find(row=>row.id===id);
+ if(library)showLibraryRecord(library);
+}
+placeControlRolePicker();
+</script><style>
+.batch-tree-bar,.library-basic-heading,.rollback-actions,.library-detail-tabs{display:flex;gap:8px;align-items:center}.batch-tree-bar{padding:8px 10px;border-bottom:1px solid var(--color-border);flex-wrap:wrap}.batch-tree-bar output{margin-left:auto;color:var(--color-muted);font-size:12px}.batch-check{flex:none;margin:0 8px 0 0}.batch-group{font-weight:600}.batch-part{padding-left:28px!important}.batch-instance{padding-left:46px!important}.library-basic-heading{justify-content:space-between;margin-bottom:18px}.library-detail-tabs{border-bottom:1px solid var(--color-border);padding-bottom:12px;margin-bottom:16px}.rollback-rows{max-height:52vh;overflow:auto;margin:12px 0}.rollback-rows table{min-width:780px}.rollback-rows thead{position:sticky;top:0;z-index:1}.rollback-preview{width:48px;height:48px;object-fit:contain}.rollback-actions{justify-content:flex-end}.batch-source-table{max-height:45vh;overflow:auto}
+</style>
+<script>
+const batchAttr=value=>escapeDecisionText(String(value)).replaceAll('"','&quot;');
+const batchLibrarySelection=new Set();
+const batchEditorSelection=new Set();
+// This static editor has one demo part; its reference designators carry separate parameter snapshots.
+const batchEditorInstances=$$('#componentTree [data-part]').map(row=>{
+ const position=row.dataset.part;
+ return {row,position,part:row.dataset.partId||row.dataset.libraryPart||'BLM18SG221TN1D',data:{packageType:'CHIP',frame:position==='FF3'?'26 × 50':'24 × 48',threshold:position==='FF3'?'72':'68'}};
+});
+const batchPackage=part=>partSyncRecords.find(row=>row.id===part)?.package||(/^(C\d|BLM|ECV)/.test(part)?'CHIP':'未记录封装');
+const batchKey=(name,part)=>JSON.stringify([name,part]);
+function batchLibraryBranches(name,parts){
+ if(!parts.length)return '';
+ const groups=new Map();
+ for(const part of parts){const pkg=batchPackage(part);if(!groups.has(pkg))groups.set(pkg,[]);groups.get(pkg).push(part)}
+ return [...groups].map(([pkg,items])=>`<div class="tree-item batch-group"><input type="checkbox" class="batch-check" data-batch-package="${batchAttr(pkg)}" data-batch-library="${batchAttr(name)}" aria-label="选择 ${batchAttr(pkg)} 全部料号">${escapeDecisionText(pkg)}</div>${items.map(part=>{
+ const key=batchKey(name,part), label=batchAttr(part), library=batchAttr(name), selected=part===state.selectedPart&&libraryKey(name)===libraryKey(deviceBrowseLibrary);
+ return `<div class="tree-item batch-part ${selected?'selected':''}" data-part-library="${library}" data-libpart="${label}"><input class="batch-check" type="checkbox" data-batch-key="${batchAttr(key)}" aria-label="选择料号 ${label}">${escapeDecisionText(part)}</div><div class="tree-item batch-instance" data-part-library="${library}" data-libpart="${label}"><input class="batch-check" type="checkbox" data-batch-key="${batchAttr(key)}" aria-label="选择 ${label} 器件 1">器件 1</div>`;
+ }).join('')}`).join('');
+}
+const batchExistingRenderRoots=renderLibraryRoots;
+renderLibraryRoots=function(){batchExistingRenderRoots();batchRefresh()};
+treeLibrarySearch.oninput=renderLibraryRoots;
+const batchEditorTree=$('#componentTree'),batchLibraryTree=$('#libraryTree');
+function batchToolbar(tree,id,add){tree.insertAdjacentHTML('beforebegin',`<div class="batch-tree-bar" id="${id}">${add?'<button class="btn" type="button" data-batch-add>批量添加</button>':''}<button class="btn btn--danger" type="button" data-batch-delete>批量删除</button><output aria-live="polite"></output></div>`);return tree.previousElementSibling}
+const batchEditorToolbar=batchToolbar(batchEditorTree,'editorBatchToolbar',true),batchLibraryToolbar=batchToolbar(batchLibraryTree,'libraryBatchToolbar',false);
+[...batchEditorTree.children].forEach((row,index)=>{
+ const input=document.createElement('input');input.type='checkbox';input.className='batch-check';input.setAttribute('aria-label','选择 '+row.firstChild.textContent.replace('▾','').trim());row.prepend(input);
+ input.onclick=event=>event.stopPropagation();input.onchange=()=>{for(const item of row.dataset.part?batchEditorInstances.filter(x=>x.row===row):batchEditorInstances){if(input.checked)batchEditorSelection.add(item.position);else batchEditorSelection.delete(item.position)}batchRefresh()};
+});
+const batchGroupKeys=input=>libraryPartsFor(input.dataset.batchLibrary).filter(p=>batchPackage(p)===input.dataset.batchPackage).map(p=>batchKey(input.dataset.batchLibrary,p));
+function batchCheck(input,keys,selection){const count=keys.filter(k=>selection.has(k)).length;input.checked=count>0&&count===keys.length;input.indeterminate=count>0&&count<keys.length;input.disabled=!hasLibraryPermission('aoi:add')}
+function batchRefresh(){
+ const positions=batchEditorInstances.map(x=>x.position);
+ for(const input of batchEditorTree.querySelectorAll('.batch-check')){const position=input.parentElement.dataset.part;batchCheck(input,position?[position]:positions,batchEditorSelection)}
+ for(const input of batchLibraryTree.querySelectorAll('.batch-check'))batchCheck(input,input.dataset.batchKey?[input.dataset.batchKey]:batchGroupKeys(input),batchLibrarySelection);
+ for(const [bar,size,label] of [[batchEditorToolbar,batchEditorSelection.size,'个器件'],[batchLibraryToolbar,batchLibrarySelection.size,'个料号']]){bar.querySelector('output').value=`已选 ${size} ${label}`;for(const b of bar.querySelectorAll('button'))b.disabled=!size||!hasLibraryPermission('aoi:add')}
+}
+batchLibraryTree.addEventListener('click',event=>{if(event.target.matches('.batch-check'))event.stopImmediatePropagation()},true);
+batchLibraryTree.addEventListener('change',event=>{const input=event.target;if(!input.matches('.batch-check'))return;for(const key of input.dataset.batchKey?[input.dataset.batchKey]:batchGroupKeys(input)){if(input.checked)batchLibrarySelection.add(key);else batchLibrarySelection.delete(key)}batchRefresh()});
+const batchRoleOptions=updateRoleOptions;updateRoleOptions=function(){batchRoleOptions();batchRefresh()};
+function batchStage(changes){
+ if(!hasLibraryPermission('aoi:add')||!changes.length)return false;
+ for(const change of changes){useLibraryDraft(change.targetLibrary);if(state.batch.status==='rejected')state.batch.status='draft';const index=state.batch.items.findIndex(i=>i.part===change.part);if(index<0)state.batch.items.push(change);else state.batch.items[index]=change;persistLibraryDrafts()}
+ persistPrototypeState();render();toast(`已将 ${changes.length} 个料号加入待提交`);return true;
+}
+const batchEditorSource=()=>editorSession.initialSource||currentDeviceLibrary();
+const batchBase=(name,part,type,version)=>({id:crypto.randomUUID(),part,targetLibrary:name,type,baseVersion:version,fields:['料号参数'],before:{frame:'现有器件框',threshold:'现有参数'},after:{frame:'—',threshold:'—'}});
+function batchConfirmDelete(rows,selection){
+ if(!rows.length){toast('选中的料号均不在目标器件库中','error');return}
+ openWorkflowConfirmation('批量删除料号',`将 ${rows.length} 个料号加入待提交删除申请，提交并审批前库数据保持不变。`,'加入待提交',()=>{if(batchStage(rows)){selection.clear();closeDialog();batchRefresh()}},true);
+}
+batchLibraryToolbar.querySelector('[data-batch-delete]').onclick=()=>batchConfirmDelete([...batchLibrarySelection].map(key=>JSON.parse(key)).filter(([name,part])=>libraryPartsFor(name).includes(part)).map(([name,part])=>batchBase(name,part,'删除',localLibraryVersions[libraryKey(name)]?.version||'—')),batchLibrarySelection);
+batchEditorToolbar.querySelector('[data-batch-delete]').onclick=()=>{const source=batchEditorSource();const parts=[...new Set(batchEditorInstances.filter(x=>batchEditorSelection.has(x.position)).map(x=>x.part))];batchConfirmDelete(parts.filter(part=>libraryPartsFor(source.library).includes(part)).map(part=>batchBase(source.library,part,'删除',source.version)),batchEditorSelection)};
+function batchCanonical(value){return Array.isArray(value)?value.map(batchCanonical):value&&typeof value==='object'?Object.fromEntries(Object.keys(value).sort().map(key=>[key,batchCanonical(value[key])])):value}
+function batchGroupInstances(instances){const groups=new Map();for(const instance of instances){if(!groups.has(instance.part))groups.set(instance.part,new Map());const options=groups.get(instance.part),key=JSON.stringify(batchCanonical(instance.data));if(!options.has(key))options.set(key,[]);options.get(key).push(instance)}return groups}
+batchEditorToolbar.querySelector('[data-batch-add]').onclick=()=>{
+ const groups=batchGroupInstances(batchEditorInstances.filter(x=>batchEditorSelection.has(x.position)));
+ if(!groups.size||!hasLibraryPermission('aoi:add'))return;
+ const source=batchEditorSource(), conflicts=[...groups].filter(([,options])=>options.size>1), chosen=new Map();
+ const stage=()=>{const rows=[...groups].map(([part,options])=>{const instance=[...options.values()][chosen.get(part)||0][0],exists=libraryPartsFor(source.library).includes(part);return {...batchBase(source.library,part,exists?'更新':'新增',source.version),before:exists?{frame:'现有器件框',threshold:'现有参数'}:{frame:'—',threshold:'—'},after:{...instance.data},sourcePosition:instance.position}});if(batchStage(rows)){batchEditorSelection.clear();closeDialog();batchRefresh()}};
+ if(!conflicts.length){stage();return}
+ $('#dialogHost').innerHTML=`<div class="dialog-backdrop"><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="batchSourceTitle"><div class="dialog__header" id="batchSourceTitle">选择器件数据来源<button id="dialogClose" class="btn btn--icon" style="margin-left:auto;border:0" aria-label="关闭"><svg><use href="#i-close"/></svg></button></div><div class="dialog__body"><p>同一料号选中的器件数据不一致。请逐个选择要加入待提交的数据。</p><div class="batch-source-table"><table class="table"><thead><tr><th>料号 ID</th><th>数据来源</th></tr></thead><tbody>${conflicts.map(([part,opts],i)=>`<tr><td>${escapeDecisionText(part)}</td><td><select class="select" aria-label="${batchAttr(part)} 数据来源" data-batch-source="${i}"><option value="">请选择来源</option>${[...opts.values()].map((items,j)=>`<option value="${j}">${escapeDecisionText(items.map(x=>x.position).join('、'))}（检测框 ${items[0].data.frame}；阈值 ${items[0].data.threshold}）</option>`).join('')}</select></td></tr>`).join('')}</tbody></table></div></div><div class="dialog__footer"><button id="dialogCancel" class="btn">取消</button><button id="batchSourceConfirm" class="btn btn--primary" disabled>加入待提交</button></div></section></div>`;
+ $('#dialogClose').onclick=$('#dialogCancel').onclick=closeDialog;
+ $$('[data-batch-source]').forEach(input=>input.onchange=()=>{const part=conflicts[Number(input.dataset.batchSource)][0];if(input.value==='')chosen.delete(part);else chosen.set(part,Number(input.value));$('#batchSourceConfirm').disabled=chosen.size!==conflicts.length});
+ $('#batchSourceConfirm').onclick=()=>{if(chosen.size===conflicts.length)stage()};
+};
+renderLibraryRoots();
+</script>
+
+</body>
 </html>
